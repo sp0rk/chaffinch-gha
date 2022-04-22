@@ -11,6 +11,10 @@ on:
         type: boolean
         required: true
         description: "Generate coverage report?"
+    secrets:
+      jitpackToken:
+        required: true
+        description: "Token for Jitpack for chaffinch-lib dependency"
 
 jobs:
   buildAndTest:
