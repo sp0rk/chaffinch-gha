@@ -1,4 +1,4 @@
-# chaffinch-gha
+# Chaffinch - Github Actions
 
 ## Reusable workflows
 
