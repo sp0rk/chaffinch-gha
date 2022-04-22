@@ -1,0 +1,13 @@
+name: Attach to trello (SELF)
+
+on:
+  pull_request:
+    types: [ opened ]
+
+jobs:
+  attachCard:
+    uses: sp0rk/chaffinch-gha/.github/workflows/trello.yml@main
+    secrets:
+      TRELLO_KEY: ${{ secrets.TRELLO_KEY }}
+      TRELLO_TOKEN: ${{ secrets.TRELLO_TOKEN }}
+      TRELLO_BOARD: ${{ secrets.TRELLO_BOARD }}
