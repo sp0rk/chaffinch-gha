@@ -1,0 +1,29 @@
+name: Attach to trello
+
+on:
+  workflow_call:
+    secrets:
+      TRELLO_KEY:
+        required: true
+        description: "App-key for trello https://trello.com/app-key"
+      TRELLO_TOKEN:
+        required: true
+        description: "Token for trello https://trello.com/app-key -> token button"
+      TRELLO_BOARD:
+        required: true
+        description: "Trello board ID, visit the board then append .json to url to find id"
+
+jobs:
+  attachCard:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - uses: dalezak/github-commit-to-trello-card@main
+        with:
+          trello-api-key: ${{ secrets.TRELLO_KEY }}
+          trello-auth-token: ${{ secrets.TRELLO_TOKEN }}
+          trello-board-id: ${{ secrets.TRELLO_BOARD }}
+          trello-card-action: "Attachment"
+          trello-list-name-commit: "In Progress"
