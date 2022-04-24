@@ -12,3 +12,7 @@
 
 ### Trello
 `sp0rk/chaffinch-gha/trello.yml@main`
+
+### Action lint
+`sp0rk/chaffinch-gha/actionLint.yml@main`
+
