@@ -1,0 +1,24 @@
+name: Run Lint on actions
+
+on:
+  workflow_call:
+      secrets:
+        REVIEWDOG_TOKEN:
+          required: true
+          description: "Token for ReviewDog To report lint issues in PRs"
+      inputs:
+        failOnError:
+          type: boolean
+          required: true
+          description: "Fail action on lint error?"
+        reporter:
+          type: string
+          required: true
+          description: "github-pr-review | github-check"
+
+jobs:
+  actionlint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: reviewdog/action-actionlint@v1

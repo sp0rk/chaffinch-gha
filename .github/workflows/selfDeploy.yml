@@ -1,0 +1,15 @@
+name: Deploy (SELF)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint:
+    uses: sp0rk/chaffinch-gha/.github/workflows/lint.yml@main
+    secrets:
+      REVIEWDOG_TOKEN: ${{secrets.REVIEWDOG_TOKEN}}
+    with:
+      failOnError: true
+      reporter: "github-check"
