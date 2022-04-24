@@ -1,5 +1,7 @@
 # Chaffinch - Github Actions
 
+![Deploy](https://github.com/sp0rk/chaffinch-gha/actions/workflows/selfDeploy.yml/badge.svg)
+
 ## Reusable workflows
 
 ### Lint
