@@ -5,14 +5,14 @@
 ## Reusable workflows
 
 ### Lint
-`sp0rk/chaffinch-gha/lint.yml@main`
+`sp0rk/chaffinch-gha/.github/workflows/lint.yml@main`
 
 ### Build & Test
-`sp0rk/chaffinch-gha/buildAndTest.yml@main`
+`sp0rk/chaffinch-gha/.github/workflows/buildAndTest.yml@main`
 
 ### Trello
-`sp0rk/chaffinch-gha/trello.yml@main`
+`sp0rk/chaffinch-gha/.github/workflows/trello.yml@main`
 
 ### Action lint
-`sp0rk/chaffinch-gha/actionLint.yml@main`
+`sp0rk/chaffinch-gha/.github/workflows/actionLint.yml@main`
 
